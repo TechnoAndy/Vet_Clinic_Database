@@ -2,7 +2,6 @@
 
 create database vet_clinic;
 
-
 CREATE TABLE animals (
     id serial PRIMARY KEY NOT NULL,
     name varchar(100),
@@ -11,5 +10,6 @@ CREATE TABLE animals (
     neutered boolean,
     weight_kg decimal
 );
+
 
 ALTER TABLE animals ADD COLUMN species varchar(250);

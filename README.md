@@ -1,10 +1,13 @@
+<a id="readme-top"></a>
+
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="https://user-images.githubusercontent.com/108806646/203941212-a33b97da-6d84-4649-b763-4e8191c24805.png" alt="logo" width="140"  height="auto" />
   <br/>
 
+  <h3><b>README</b></h3>
+
 </div>
-<br>
 
 # 📗 Table of Contents
 
@@ -18,7 +21,7 @@
 
 # VET CLINIC
 
-VET CLINIC is a database that contains many informations about the animals in a clinic (their names, types, birth dates, weight, etc)
+VET CLINIC is a database that contains information about the animals in a clinic (their names, types, birth dates, weight and more)
 
 ## Built With
 

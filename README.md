@@ -1,8 +1,8 @@
-<a id="readme-top"></a>
+<a name="Metrics WebApp"></a>
 
 <div align="center">
 
-  <img src="https://user-images.githubusercontent.com/108806646/203941212-a33b97da-6d84-4649-b763-4e8191c24805.png" alt="logo" width="140"  height="auto" />
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>README</b></h3>

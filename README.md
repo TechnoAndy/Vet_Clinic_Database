@@ -1,14 +1,3 @@
-<a id="readme-top"></a>
-
-<div align="center">
-
-  <img src="https://user-images.githubusercontent.com/108806646/203941212-a33b97da-6d84-4649-b763-4e8191c24805.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>README</b></h3>
-
-</div>
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#vet-clinic)

@@ -12,7 +12,6 @@ VALUES ('Pikachu', '01-07-2021', 1, false, 15.04);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 VALUES ('Devimon', '05-12-2017', 5, true, 11);
 
-
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 VALUES ('Charmander', '02-08-2020', 0, false, -11), 
 
@@ -30,7 +29,6 @@ VALUES ('Boarmon', '06-07-2005', 7, true, 20.4),
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 VALUES ('Boarmon', '06-07-2005', 7, true, 20.4), 
-
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 VALUES ('Ditto', '05-14-2022', 4, true, 22);
@@ -92,3 +90,4 @@ UPDATE animals
 UPDATE animals
   SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
   WHERE name IN ('Angemon', 'Boarmon');
+

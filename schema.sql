@@ -2,6 +2,7 @@
 
 create database vet_clinic;
 
+
 CREATE TABLE animals (
     id serial PRIMARY KEY NOT NULL,
     name varchar(100),
@@ -10,7 +11,6 @@ CREATE TABLE animals (
     neutered boolean,
     weight_kg decimal
 );
-
 
 ALTER TABLE animals ADD COLUMN species varchar(250);
 
@@ -30,7 +30,29 @@ ALTER TABLE animals ADD CONSTRAINT fk_name FOREIGN KEY(species_id) REFERENCES sp
 ALTER TABLE animals ADD owner_id int;
 
 ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id);
+-- Join table
 
+CREATE TABLE vets(
+    id BIGSERIAL NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    date_of_graduation DATE,
+    PRIMARY KEY(id)
+);
 
-ALTER TABLE animals ADD COLUMN species varchar(250);
+CREATE TABLE specializations(
+    vet_id INT,
+    species_id INT,
+    PRIMARY KEY(vet_id, species_id),
+    FOREIGN KEY(vet_id) REFERENCES vets(id),
+    FOREIGN KEY(species_id) REFERENCES species(id)
+);
 
+CREATE TABLE visits(
+    vet_id INT,
+    animal_id INT,
+    date DATE,
+    PRIMARY KEY(vet_id, animal_id, date),
+    FOREIGN KEY(vet_id) REFERENCES vets(id),
+    FOREIGN KEY(animal_id) REFERENCES animals(id)
+);

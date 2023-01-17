@@ -152,21 +152,21 @@ VALUES(
 INSERT INTO visits (vet_id, animal_id, date)
 VALUES(
   (SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
-  (SELECT id FROM animals WHERE name = 'Plantmon' LIMIT 1),
+  (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Dec 21, 2019'
 );
 
 INSERT INTO visits (vet_id, animal_id, date)
 VALUES(
   (SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
-  (SELECT id FROM animals WHERE name = 'Plantmon' LIMIT 1),
+  (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Aug 10, 2020'
 );
 
 INSERT INTO visits (vet_id, animal_id, date)
 VALUES(
   (SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
-  (SELECT id FROM animals WHERE name = 'Plantmon' LIMIT 1),
+  (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Apr 07, 2021'
 );
 

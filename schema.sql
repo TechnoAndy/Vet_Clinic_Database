@@ -56,3 +56,34 @@ CREATE TABLE visits(
     FOREIGN KEY(vet_id) REFERENCES vets(id),
     FOREIGN KEY(animal_id) REFERENCES animals(id)
 );
+
+-- prpject requirements;
+SELECT COUNT(*) FROM visits where animals_id = 4;
+SELECT * FROM visits where vets_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+-- Use EXPLAIN ANALYZE on the previous queries to check what is happening. Take screenshots of them -
+-- before improve
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits where animals_id = 4;
+SELECT COUNT(*) FROM visits where animals_id = 4;
+
+-- after improve
+CREATE INDEX visits_animals_id ON visits(animals_id);
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits WHERE animals_id = 4;
+
+-- SELECT * FROM visits where vet_id = 2; Before improve
+SELECT * FROM visits WHERE vets_id = 2;
+explain analyse SELECT COUNT(*) FROM visits where animals_id = 2;
+
+-- Querie : SELECT * FROM visits where vet_id = 2; After improve
+CREATE INDEX visits_vets_id ON visits(vets_id);
+EXPLAIN ANALYSE SELECT * FROM visits WHERE animals_id = 2;
+
+-- Querie :SELECT * FROM owners where email = 'owner_18327@mail.com';
+-- Before 
+EXPLAIN ANALYSE SELECT * FROM owners WHERE email ='owner_18327@mail.com';
+SELECT FROM owners WHERE email='owner_18327@mail.com';
+
+-- after
+CREATE INDEX owners_email ON owners(email);
+EXPLAIN ANALYSE SELECT * FROM owners WHERE email ='owner_18327@mail.com';

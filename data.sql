@@ -44,15 +44,19 @@ WHERE species_id IS NULL;
 
 -- Update owners_id
 UPDATE animals
-  SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith')
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith' LIMIT 1)
   WHERE name = 'Agumon';
-  SET owner_id = (SELECT id from owners WHERE full_name = 'Jennifer Orwell')
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Jennifer Orwell' LIMIT 1)
   WHERE name IN ('Gabumon', 'Pikachu');
-  SET owner_id = (SELECT id from owners WHERE full_name = 'Bob')
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Bob' LIMIT 1)
   WHERE name IN ('Devimon', 'Plantmon');
-  SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond' LIMIT 1)
   WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
-  SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester' LIMIT 1)
   WHERE name IN ('Angemon', 'Boarmon');
 
 INSERT INTO vets (name, age, date_of_graduation) 

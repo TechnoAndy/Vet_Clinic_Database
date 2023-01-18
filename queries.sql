@@ -1,20 +1,28 @@
 /*Queries that provide answers to the questions from all projects.*/
 
+/* Find all animals whose name ends in "mon" */
 SELECT * from animals WHERE name LIKE '%mon';
+/* List the name of all animals born between 2016 and 2019 */
 SELECT * from animals WHERE date_of_birth BETWEEN '2016-01-01' and '2019-12-31';
+/* List the name of all animals that are neutered and have less than 3 escape attempts */
 SELECT * from animals WHERE neutered IS true and escape_attempts < 3;
+/* List the date of birth of all animals named either "Agumon" or "Pikachu" */
 SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
+/* List name and escape attempts of animals that weigh more than 10.5kg */
 SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
+/* Find all animals that are neutered */
 SELECT * FROM animals WHERE neutered IS TRUE;
+/* Find all animals not named Gabumon */
 SELECT * FROM animals WHERE name != 'Gabumon';
+/* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
-* Begin Transaction A */
+/* First transaction */
 BEGIN;
-
+/* set species column to unspecified */
 update animals set species = 'unspecified';
 
-/* Verify that change was made */
+/* Verify the change was made */
 SELECT * from animals;
 
 /* Rollback changes */
@@ -23,7 +31,7 @@ ROLLBACK;
 /* Verify changes */
 SELECT * from animals;
 
-/* Begin Transaction B */
+/* Second transaction */
 BEGIN;
 
 /* update species col for animals with names ending in mon */
@@ -38,11 +46,11 @@ SELECT * from animals;
 /* commit changes */
 COMMIT;
 
-/* Verify that change was made and persists after commit */
+/* Verify change was made and persists after commit */
 SELECT * from animals;
 
-/* Delete all records in the animals table transaction C */
-/* Begin Transaction C */
+/* Delete all records in the animals table */
+/* Third transaction */
 BEGIN;
 
 /* delete all records */
@@ -57,7 +65,7 @@ ROLLBACK;
 /* verify all records still exist */
 SELECT * from animals;
 
-/* Begin Transaction D */
+/* Fourth transaction */
 BEGIN;
 
 /* Delete all animals born after Jan 1st, 2022. */
@@ -70,7 +78,6 @@ WHERE date_of_birth > '01-01-2022';
 SAVEPOINT dob;
 
 /* update all animals' weights multiplied by -1 */
-
 UPDATE animals 
 SET weight_kg =weight_kg * -1;
 
@@ -80,7 +87,6 @@ ROLLBACK TO dob;
 
 
 /* update all animals' weights that are negative multiplied by -1 */
-
 UPDATE animals 
 SET weight_kg = weight_kg * -1 
 WHERE weight_kg < 0;
@@ -92,7 +98,6 @@ COMMIT;
 SELECT COUNT(*) from animals;
 
 /* How many animals have never tried to escape? */
-
 SELECT COUNT(*) from animals 
 WHERE escape_attempts = 0;
 
@@ -100,7 +105,6 @@ WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) from animals;
 
 /* Who escapes the most, neutered or not neutered animals? */
-
 SELECT neutered, count(neutered) as result FROM animals GROUP BY neutered ORDER BY result DESC LIMIT 1;
 
 /* What is the minimum and maximum weight of each type of animal? */

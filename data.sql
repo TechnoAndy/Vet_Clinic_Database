@@ -81,78 +81,97 @@ VALUES((SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Agumon' LIMIT 1),
    'May 24, 2020');
 
-((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Agumon'LIMIT 1),
     'Jul 22, 2020');
 
-((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Gabumon' LIMIT 1),
   'Feb 02, 2021');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Pikachu' LIMIT 1),
   'Jan 05, 2020');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Pikachu' LIMIT 1),
   'Mar 08, 2020');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Pikachu' LIMIT 1),
   'May 14, 2020');
 
-((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Devimon' LIMIT 1),
   'May 04, 2021');
 
-((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Charmander' LIMIT 1),
   'Feb 24, 2021');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Dec 21, 2019');
 
-((SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Aug 10, 2020');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Planton' LIMIT 1),
   'Apr 07, 2021');
 
-((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Squirtle' LIMIT 1),
   'Sep 29, 2019');
 
-((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Angemon' LIMIT 1),
   'Oct 03, 2020');
 
-((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Jack Harkness' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Angemon' LIMIT 1),
   'Nov 04, 2020');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Boarmon' LIMIT 1),
   'Jan 24, 2019');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Boarmon' LIMIT 1),
   'May 15, 2019');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Boarmon' LIMIT 1),
   'Feb 27, 2020');
 
-((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Maisy Smith' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Boarmon' LIMIT 1),
   'Aug 03, 2020');
 
-((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Blossom' LIMIT 1),
   'May 24, 2020');
 
-((SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
+INSERT INTO visits (vet_id, animal_id, date)
+VALUES((SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1),
   (SELECT id FROM animals WHERE name = 'Blossom' LIMIT 1),
   'Jan 11, 2021');

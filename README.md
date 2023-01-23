@@ -10,14 +10,17 @@
 
 # VET CLINIC
 
-VET CLINIC is a database that contains information about the animals in a clinic (their names, types, birth dates, weight and more)
+- VET CLINIC is a database that contains information about the animals in a clinic (their names, types, birth dates, weight and more)
+
+- Basically the architecture is star schema.
+
+- The project includes creating multiple tables, filling the tables, query the tables, apply normalization and query tables.
 
 ## Built With
 
 <ul>
   <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
 </ul>
-
 
 ## Getting Started
 
@@ -45,10 +48,10 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments 
+## Acknowledgments
 
-- Microverse 
+- Microverse
 
-## License 
+## License
 
 This project is [MIT](./LICENSE) licensed.
